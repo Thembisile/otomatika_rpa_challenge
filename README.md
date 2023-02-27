@@ -35,7 +35,7 @@ Open a terminal window and navigate to the project directory.
 
 Run the following command to start the script:
 
-```python nytimes.py```
+```python final_tester.py```
 
 - Enter the search phrase when prompted.
 
