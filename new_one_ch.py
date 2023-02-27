@@ -15,9 +15,9 @@ print("Parsed HTML content:", soup)
 articles = []
 for i, article in enumerate(soup.find_all("article")[:5]):
     title = article.find("h2").text.strip()
-    author = article.find("span", {"class": "css-1n7hynb"}).text.strip()
-    print(f"Article {i+1}: {title} by {author}")
-    articles.append({"Title": title, "Author": author})
+    author = article.find("input", {"class": "css-1n7hynb"}).text.strip()
+    print(f"Article {i+1}: {title}")
+    articles.append({"Title": title})
 
 print("Extracted articles:", articles)
 
