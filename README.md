@@ -10,6 +10,18 @@ To be able to run the script, you will need to have the following installed on y
 - pip package manager
 - Installation
 
+---
+
+**Python: Python** is required to run the code. You can download the latest version of Python from the official website (https://www.python.org/downloads/) and install it on your system. The code should work with Python 3.7 or later.
+
+**Chrome Browser**: The code uses the Chrome webdriver to automate the web browsing. Therefore, you need to have the Chrome browser installed on your system. You can download the latest version of Chrome from the official website (https://www.google.com/chrome/) and install it on your system.
+
+**Chrome webdriver**: The code uses the Chrome webdriver to automate the web browsing. You need to download the Chrome webdriver that matches your Chrome browser version. You can download the Chrome webdriver from the official website (https://sites.google.com/a/chromium.org/chromedriver/downloads) and save it to your system. Make sure to add the path of the Chrome webdriver to the webdriver.chrome.driver environment variable.
+
+**Required Python packages**: The code requires the pandas and selenium Python packages. You can install these packages using pip by running the following command:
+```pip install pandas selenium```
+
+
 Clone the repository or download the zip file and extract it.
 
 ```git clone -b master https://github.com/Thembisile/otomatika_rpa_challenge.git```
