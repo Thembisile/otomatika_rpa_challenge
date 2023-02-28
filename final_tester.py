@@ -34,14 +34,14 @@ options.add_argument('--incognito')
 options.add_argument('--headless')
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-
+browser = Selenium()
 # Define a function to set up the driver and navigate to the search page
 def navigate_to_search_page():
-    driver.get("https://www.nytimes.com/search")
-    WebDriverWait(driver, 10).until(
+    browser.open_available_browser("https://www.nytimes.com")
+    WebDriverWait(driver, 20).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "css-1j26cud")))
-    search_input = driver.find_element(
-        By.CSS_SELECTOR, By.CSS_SELECTOR, "css-1j26cud")
+    search_input = browser.driver.find_element(
+        By.CSS_SELECTOR, "css-1j26cud")
     search_input.send_keys(search_phrase)
     search_button = driver.find_element(By.CSS_SELECTOR, "css-1gudca6")
     search_button.click()
