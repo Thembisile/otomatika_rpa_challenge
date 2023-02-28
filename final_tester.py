@@ -5,6 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from RPA.Browser.Selenium import Selenium
 
 
 # Prompt the user to enter the search phrase
@@ -31,16 +33,9 @@ options.add_argument('--ignore-certificate-errors')
 options.add_argument('--incognito')
 options.add_argument('--headless')
 
-os.environ["webdriver.chrome.driver"] = "/Users/thamim/Desktop/chromedriver"
-
-# Now you can access the environment variable like this:
-driver_path = os.environ["webdriver.chrome.driver"]
-
-driver = webdriver.Chrome(executable_path=driver_path, options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 # Define a function to set up the driver and navigate to the search page
-
-
 def navigate_to_search_page():
     driver.get("https://www.nytimes.com/search")
     WebDriverWait(driver, 10).until(
@@ -74,11 +69,9 @@ def navigate_to_search_page():
             break
 
 # Define a function to extract the articles
-
-
 def extract_articles():
     articles = []
-    search_results = driver.find_elements(By.CLASS_NAME, "css-1l4spti")
+    search_results = driver.find_elements(By.CLASS_NAME, "query")
     for i, result in enumerate(search_results):
         # Check if the article was published within the specified timeframe
         time_element = result.find_element(By.CLASS_NAME, "css-1echdzn")
