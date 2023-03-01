@@ -10,24 +10,24 @@ To be able to run the script, you will need to have the following installed on y
 - pip package manager
 - Installation
 
-- Clone the repository or download the zip file and extract it.
+ Clone the repository or download the zip file and extract it.
 
 ```git clone -b master https://github.com/Thembisile/otomatika_rpa_challenge.git```
 
-- Open a terminal window and navigate to the project directory.
+ Open a terminal window and navigate to the project directory.
 
 ```cd otomatika*``` OR ```cd otomatika_rpa_challenge```
 
-- Install the required packages by running the following command:
+Install the required packages by running the following command:
 
 ```pip install -r requirements.txt```
 
-- Download the latest version of the Chrome driver compatible with your operating system from this link: 
+Download the latest version of the Chrome driver compatible with your operating system from this link: 
 [chromedriver download](https://sites.google.com/a/chromium.org/chromedriver/downloads). 
 
-- Extract the file and save the executable file in a location of your choice.
+Extract the file and save the executable file in a location of your choice.
 
-- Open the ```nytimes.py``` file in a code editor of your choice and replace the value of the ```driver_path``` variable with the path of the Chrome driver executable file on your system.
+Open the ```nytimes.py``` file in a code editor of your choice and replace the value of the ```driver_path``` variable with the path of the Chrome driver executable file on your system.
 
 ## Running the script
 
